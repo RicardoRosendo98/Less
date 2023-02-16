@@ -1,0 +1,95 @@
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768) and (max-width: 1023px)";
+
+.marginBottom16 {
+    margin-bottom: 16px;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    margin-top: 4em;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+        display: block;
+
+        button {
+            margin-left: 5em;
+            margin-top: 26px;
+            margin-bottom: 28px;
+        }
+     }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+     }
+    
+}
+
+img {
+    display: block;
+    margin: 0 auto 24px;
+    border-radius: 30px;
+    width:300px;
+    height: 500px;
+    margin-right: 2em;
+}
+
+.information {
+
+    h1{
+       .marginBottom16();
+        font-size: 26px;
+    }
+
+    h2{
+        .marginBottom16();
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    P {
+        font-size: 15px;
+        font-style: italic;
+        opacity: .7;
+    }
+
+}
+
+
+ button{
+            transition: all ease .3s;
+            margin-top: 14em;
+            margin-left: 77%;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: #colors[colorBottom];
+            color: #colors[colorTextBottom];
+            border: 2px solid #colors[colorBottom];
+            transition: all ease .5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.3);
+                background-color: #colors[backgroundColor];
+                color: #colors[colorBottom];
+            }
+}
+
